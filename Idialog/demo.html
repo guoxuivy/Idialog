@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+<link href="Istyle.css" type="text/css" rel="stylesheet" />
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="Idialog.js" type="text/javascript"></script>
+</head>
+<style>
+.list {margin:10px 0px}
+.list label{float:left}
+</style>
+<body>
+<div class="add_store none" title="新增门店">
+  <div class="tjfj_two">
+    <form method="post" action="" class="form">
+      <div class="list">
+        <label>门店名称：</label><div style="margin-left: 100px;"><input type="text" placeholder="宫廷店" class="gysgl_07 inputxt" name="dept_name"/><span class="com_gbt">（必填）</span></div>
+      </div>
+      <div class="list">
+        <label>房间数量：</label><div style="margin-left: 100px;"><input type="text" class="gysgl_07 inputxt" placeholder="请填写该房间拥有的实操房间数量" name="room_num"/><span class="com_gbt">（必填）</span></div>
+      </div>
+      <div class="list">
+        <label>门店位置：</label>
+        <div style="margin-left: 100px;">
+        <select class="mdgl_06" name="province"><option value=>--省--</option></select>
+        <select class="mdgl_06" name="city"><option value=>--市--</option></select>
+        <select class="mdgl_06" name="area"><option  value=>--区--</option></select><span class="com_gbt">（必填）</span>
+        </div>
+      </div>
+      <div class="list">
+        <label>详细地址：</label><div style="margin-left: 100px;"><textarea type="text" placeholder="" class="gysgl_07" name="address"/></textarea><span class="com_gbt">（必填）</span></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+var d = Idialog({
+        top:120,
+        width:500,
+        title:'通知',
+        content:$(".add_store"),
+        ok:function(html){
+          return true;
+        },
+        cancel:true,
+      });
+</script>
+</body>
+</html>
+
+
