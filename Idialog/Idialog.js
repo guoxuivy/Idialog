@@ -177,7 +177,7 @@ var d = Idialog({
 		setTimeout(function() {
 			tips.remove();
 			if(typeof(func) == 'function'){
-				func(obj);
+				func();
 			}
 		},time*1000);
 	};
